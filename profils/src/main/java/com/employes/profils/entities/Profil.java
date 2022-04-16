@@ -25,4 +25,6 @@ public class Profil {
     private int nbrAExp;
     private String competence;
     private String email;
+
+
 }
