@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 
+import java.util.List;
+
 
 @SpringBootTest
 class ProfilsApplicationTests {
@@ -24,5 +26,23 @@ class ProfilsApplicationTests {
      Profil p = profilRepository.findById(1L).get();
      System.out.println(p);
     }
-
+    @Test
+    public void testUpdateProfil()
+    {
+     Profil p = profilRepository.findById(1L).get();
+     p.setNbrAExp(6);
+     profilRepository.save(p);
+     System.out.println(p);
+    }
+    @Test
+    public void testDeleteProfil()
+    {
+     profilRepository.deleteById(1L);
+    }
+    @Test
+    public void testFindAllProfils(){
+        List<Profil> profs = profilRepository.findAll();
+        for (Profil p:profs)
+            System.out.println(p);
+    }
 }
