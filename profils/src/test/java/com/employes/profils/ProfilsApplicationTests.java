@@ -13,7 +13,7 @@ import java.util.List;
 @SpringBootTest
 class ProfilsApplicationTests {
 
-    @Autowired
+  /*  @Autowired
     private ProfilRepository profilRepository;
     @Test
     public void testCreateProfil() {
@@ -34,7 +34,7 @@ class ProfilsApplicationTests {
      profilRepository.save(p);
      System.out.println(p);
     }
-    @Test
+     @Test
     public void testDeleteProfil()
     {
      profilRepository.deleteById(1L);
@@ -45,4 +45,5 @@ class ProfilsApplicationTests {
         for (Profil p:profs)
             System.out.println(p);
     }
+    */
 }
